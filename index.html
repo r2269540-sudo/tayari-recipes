@@ -1,3 +1,10 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f0dc">
+<meta name="format-detection" content="telephone=no">
 <title>מתכוני הבית של משפחת טיירי</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
@@ -13,8 +20,9 @@
   --display:Lavi,"Frank Ruhl Libre","David",serif; --hand:Idealist,"Segoe Script",cursive;
   --body:Baznat,"Assistant","Arial",sans-serif; --label:Hadassah,"David",serif;
 }
-html{background:var(--paper)}
-body{background:radial-gradient(ellipse at 50% 0%,#fbf8ec 0%,var(--paper) 55%,#efe7cf 100%) fixed,var(--paper);color:var(--ink);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.55;direction:rtl}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--paper);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:radial-gradient(ellipse at 50% 0%,#fbf8ec 0%,var(--paper) 55%,#efe7cf 100%) no-repeat,var(--paper);margin:0;min-height:100vh;min-height:100dvh;color:var(--ink);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.55;direction:rtl}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
 .wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px;position:relative}
 .garland{display:block;width:min(728px,100%);height:auto;margin:0 auto;transform:scaleX(-1)}
@@ -98,7 +106,7 @@ ol.steps li::before{content:counter(s);font-family:var(--display);color:var(--wi
 .mine{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
 .confirm{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:15px}
 .toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--wine);color:#fff;font-weight:700;padding:10px 18px;border-radius:999px;z-index:20;font-size:15px}
-@media (max-width:560px){.form .two{grid-template-columns:1fr}}
+@media (max-width:560px){.form .two{grid-template-columns:1fr}.form{padding:14px}button,a{-webkit-tap-highlight-color:transparent}}
 @media (prefers-reduced-motion:no-preference){.recipe{animation:in .25s ease-out}@keyframes in{from{opacity:.4;transform:translateY(6px)}}}
 @media (max-width:560px){.corner{display:none}.sec{grid-template-columns:22px 1fr;gap:0 10px}}
 </style>
@@ -115,7 +123,7 @@ ol.steps li::before{content:counter(s);font-family:var(--display);color:var(--wi
     <div class="tools">
       <div class="toprow"><div class="search">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a73556" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-        <input id="q" type="search" placeholder="חיפוש מתכון או מצרך, למשל: שוקולד, פטריות…" autocomplete="off">
+        <input id="q" type="search" placeholder="חיפוש מתכון או מצרך…" autocomplete="off">
       </div><button class="addbtn" id="addbtn" type="button" hidden>+ הוספת מתכון</button></div>
       <div class="chips" id="chips"></div>
     </div>
